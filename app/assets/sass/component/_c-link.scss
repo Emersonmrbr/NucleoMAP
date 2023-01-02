@@ -1,0 +1,81 @@
+$componente-name: "c-link";
+
+.#{$componente-name} {
+	&-frame {
+		align-items: center;
+		border-bottom: solid ($global-module-size / 50) map-color(map-black);
+		display: flex;
+		height: $global-module-size;
+		width: 100%;
+		&:first-child {
+			border-bottom: solid ($global-module-size / 50) map-color(map-black);
+		}
+		@include breakpoint(640-up) {
+			display: block;
+			font-weight: $global-font-weight-light;
+			line-height: $global-line-height-small;
+			padding: ($global-module-size/4) 0;
+			position: relative;
+			transition: $transition-function-padding-link;
+			&:first-child {
+				border-bottom: none;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				height: ($global-module-size/20);
+				margin-top: ($global-module-size/20);
+				position: absolute;
+				transform: scale(0, 1);
+				transition: $transition-function-transform-link;
+				width: 100%;
+			}
+
+			&:hover {
+				&::after {
+					transform: scale(1, 1);
+				}
+			}
+
+			&:hover {
+				transition: $transition-function-transform-link;
+			}
+		}
+	}
+
+	&-skin {
+		background: none;
+		border: none;
+		color: map-color(map-grey);
+		cursor: pointer;
+		font-family: "Roboto";
+		font-size: $global-font-size-medium;
+		font-style: normal;
+		text-transform: uppercase;
+		transition: $transition-function-padding-link;
+		@include breakpoint(640-up) {
+			padding: ($global-module-size/4) 0;
+			position: relative;
+
+			&::after {
+				background-color: map-color(map-grey-darken-10);
+				transition: $transition-function-transform-link;
+				width: 100%;
+			}
+
+			&:hover {
+				color: map-color(map-grey-darken-10);
+				// font-style: normal;
+				font-weight: $global-font-weight-bold;
+			}
+
+			&--footer {
+				width: auto;
+				&::after {
+					background-color: map-color(map-white);
+				}
+			}
+		}
+	}
+}

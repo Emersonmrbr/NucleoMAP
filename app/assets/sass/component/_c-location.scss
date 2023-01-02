@@ -1,0 +1,24 @@
+$componente-name: "c-location";
+
+.#{$componente-name} {
+	padding: 0;
+	@include breakpoint(720-up) {
+		height: auto;
+		width: 100%;
+		padding: 0 $global-module-size;
+	}
+	&__maps {
+		height: 800px;
+		width: 100%;
+	}
+	&__address {
+		background-color: map-color(map-grey-lighten-50);
+		height: auto;
+		margin: $global-module-size 0;
+		padding: $global-module-size;
+		width: 100%;
+		@include breakpoint(1120-up) {
+			width: 50%;
+		}
+	}
+}
