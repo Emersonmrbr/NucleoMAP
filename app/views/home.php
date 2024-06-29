@@ -1,6 +1,13 @@
 <div class="c-slider">
     <div class="c-slider__gallery-wrapper">
-        <figure class="c-slider__gallery js-carousel">
+        <figure js-carousel class="c-slider__gallery">
+            <img src="app/assets/image/automacaoindustrial/image4.jpg" alt="Foto 4 máquina Núcleo MAP" class="c-slider__item">
+            <figcaption class="c-slider__description">
+                <h3 class="c-slider__title">Consultoria</h3>
+                <p class="c-slider__text">Damos palpites que geram economias e produtividade.</p>
+            </figcaption>
+        </figure>
+        <figure class="c-slider__gallery">
             <img src="app/assets/image/automacaoindustrial/image1.jpg" alt="Foto 1 máquina Núcleo MAP" class="c-slider__item">
             <figcaption class="c-slider__description">
                 <h3 class="c-slider__title">Qualidade, tecnologia e inovação</h3>
@@ -36,13 +43,13 @@
             </figcaption>
         </figure>
     </div>
-    <button class="c-slider__prev">
+    <button js-prev class="c-slider__prev">
         <svg viewBox="0 0 512 512" class="c-slider__arrow-wrapper">
             <g class="c-slider__arrow-prev">
                 <polygon points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 " />
             </g>
         </svg></button>
-    <button class="c-slider__next">
+    <button js-next class="c-slider__next">
         <svg viewBox="0 0 512 512" class="c-slider__arrow-wrapper">
             <g class="c-slider__arrow-next">
                 <polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 " />

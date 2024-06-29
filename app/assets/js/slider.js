@@ -10,22 +10,24 @@ function changeImage(direction) {
 buttonNext.addEventListener("click", () => {
 	currentIndex++;
 	if (currentIndex > amountImages) {
-		currentIndex = 0;
+		currentIndex = -1;
 	}
 	changeImage("next");
 });
 
 buttonPrev.addEventListener("click", () => {
 	currentIndex--;
-	if (currentIndex < 0) {
+	if (currentIndex < -1) {
 		currentIndex = amountImages;
 	}
 	changeImage("prev");
 });
 carousel.addEventListener("transitionend", () => {
 	if (carousel.style.marginLeft === `-${amountImages * 100}%`) {
-		currentIndex = 0;
+		currentIndex = -1;
 		carousel.style.transition = "none";
 		carousel.style.marginLeft = `-${currentIndex * 100}%`;
+		console.log(currentIndex);
+		console.log(amountImages);
 	}
 });

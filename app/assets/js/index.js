@@ -1,8 +1,8 @@
 const buttonClose = document.querySelector(".js-button-close");
 const buttonMobile = document.querySelectorAll(".js-button-mobile");
-const buttonNext = document.querySelector(".c-slider__next");
-const buttonPrev = document.querySelector(".c-slider__prev");
-const carousel = document.querySelector(".js-carousel");
+const buttonNext = document.querySelector("[js-next]");
+const buttonPrev = document.querySelector("[js-prev]");
+const carousel = document.querySelector("[js-carousel]");
 const header = document.querySelector(".js-header");
 const images = document.querySelectorAll(".c-slider__gallery");
 const menuFlyout = document.querySelector(".js-menu-flyout");
@@ -14,9 +14,9 @@ const stickerLag = document.querySelector(".js-sticky__lag");
 const stickers = document.querySelectorAll(".js-sticky");
 const uP720 = window.matchMedia("(min-width: 720px)");
 
-let amountImages = images.length - 1;
+let amountImages = images.length - 2;
 let classOpened;
 let clickMenu;
-let currentIndex = 0;
+let currentIndex = -1;
 let isCollapsed;
 let menuIsOpened;
